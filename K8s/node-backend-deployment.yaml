@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-backend
+spec:
+  selector:
+    matchLabels:
+      app: node
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: node
+      containers:
+      - name: node-backend
+        image: cicdmicrosvc1-d4g7c6aehxc5amfa.azurecr.io/omm-node:tag
+        ports:
+        - containerPort: 4000
+        envFrom:
+        - secretRef:
+            name: node-secret
+        - configMapRef:
+            name: node-config
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-service
+spec:
+  selector:
+    app: node
+  type: ClusterIP
+  ports:
+  - protocol: TCP
+    port: 4000
+    targetPort: 4000
