@@ -1,3 +1,21 @@
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: node-backend
+# spec:
+#   selector:
+#     matchLabels:
+#       app: node
+#   replicas: 1
+#   template:
+#     metadata:
+#       labels:
+#         app: node
+#       containers:
+#       - name: node-backend
+#         image: cicdmicrosvc1-d4g7c6aehxc5amfa.azurecr.io/omm-node:tag
+#         ports:
+#         - containerPort: 4000
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -11,6 +29,7 @@ spec:
     metadata:
       labels:
         app: node
+    spec:
       containers:
       - name: node-backend
         image: cicdmicrosvc1-d4g7c6aehxc5amfa.azurecr.io/omm-node:tag
