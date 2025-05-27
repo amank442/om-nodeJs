@@ -34,7 +34,7 @@ spec:
       - name: node-backend
         image: cicdmicrosvc1-d4g7c6aehxc5amfa.azurecr.io/omm-node:tag
         ports:
-        - containerPort: 4000
+        - containerPort: 3000
         envFrom:
         - secretRef:
             name: node-secret
@@ -52,5 +52,5 @@ spec:
   type: ClusterIP
   ports:
   - protocol: TCP
-    port: 4000
-    targetPort: 4000
+    port: 3000
+    targetPort: 3000
