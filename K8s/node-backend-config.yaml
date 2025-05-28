@@ -3,4 +3,4 @@ apiVersion: v1
 metadata:
   name: node-config
 data:
-  SPRING_BASE_URL: http://spring-service:8080
+  SPRING_BASE_URL: http://spring-service:8081
