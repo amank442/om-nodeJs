@@ -15,9 +15,12 @@ const port=3000;
 app.use(cors())
 
 //Use body-parser middleware to parse JSON request bodies
+
 app.use(bodyParser.json());
 
 
+app.use('/billing/',express.static('./public'))
+app.use('/',express.static('./public'))
 app.use('/userapi',userRoute);
 app.use('/itemapi',itemRoute)
 app.use('/billapi',billRoute)
