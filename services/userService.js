@@ -12,6 +12,7 @@ require("dotenv").config()
 const createUserService = async (userData) => {
 
     const url = `${process.env.SPRING_BASE_URL}/createUser`;
+    console.log(url);
 
     const headers = { 'Content-Type': 'application/json' };
 
