@@ -19,8 +19,7 @@ app.use(cors())
 app.use(bodyParser.json());
 
 
-app.use('/billing/',express.static('./public'))
-app.use('/',express.static('./public'))
+
 app.use('/userapi',userRoute);
 app.use('/itemapi',itemRoute)
 app.use('/billapi',billRoute)
