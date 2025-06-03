@@ -40,6 +40,20 @@ spec:
             name: node-secret
         - configMapRef:
             name: node-config
+
+        readinessProbe:
+          httpGet:
+            path: /userapi
+            port: 3000
+          initialDelaySecond: 5
+          peroidSecond: 10
+
+        livenessProbe:
+          httpGet:
+            path: /userapi
+            port: 3000
+          initialDelaySecond: 15
+          periordSecond: 20
 ---
 
 apiVersion: v1
