@@ -2,7 +2,7 @@ pipeline{
     agent any
     
      parameters {
-        string(name: 'SERVICE_NAME', defaultValue: 'omm-frontend' , description : 'Image / repository name')
+        string(name: 'SERVICE_NAME', defaultValue: 'omm-node' , description : 'Image / repository name')
         string(name: 'IMAGE_TAG', defaultValue: "" , description : 'Docker Image Tag')
     }
         
