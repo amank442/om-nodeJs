@@ -46,14 +46,14 @@ spec:
             path: /health
             port: 3000
           initialDelaySeconds: 5
-          peroidSeconds: 10
+          periodSeconds: 10
 
         livenessProbe:
           httpGet:
             path: /health
             port: 3000
           initialDelaySeconds: 15
-          periordSeconds: 20
+          periodSeconds: 20
 ---
 
 apiVersion: v1
