@@ -36,5 +36,5 @@ app.listen(port,()=>{
 })
 
 app.get('/health',(req,res)=>{
-    app.status(200).send('OK');
+    res.sendStatus(200);
 });
