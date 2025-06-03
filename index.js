@@ -34,3 +34,7 @@ app.listen(port,()=>{
            console.log(error)
     }
 })
+
+app.get('/health',(req,res)=>{
+    app.status(200).send('OK');
+});
